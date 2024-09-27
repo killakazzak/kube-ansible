@@ -1,0 +1,30 @@
+k8s_ha:
+  hosts:
+    # HA nodes
+	ismail-ha101p:
+       ansible_host: 10.207.173.116
+	ismail-ha102p:
+       ansible_host: 10.207.173.117	
+k8s_masters:
+  hosts:
+    # Control nodes
+    ismail-ctr101p:
+      ansible_host: 10.207.173.121
+    ismail-ctr103p:
+	  ansible_host: 10.207.173.122
+	ismail-ctr103p:
+	  ansible_host: 10.207.173.123
+k8s_workers:
+  hosts:
+    # Worker nodes
+    ismail-data101p:
+      ansible_host: 10.207.173.124
+    ismail-data102p:
+      ansible_host: 10.207.173.125
+    ismail-data103p:
+      ansible_host: 10.207.173.126
+k8s_cluster:
+  children:
+    k8s_ha:
+    k8s_masters:
+    k8s_workers:
