@@ -29,17 +29,19 @@ ssh-keygen
 Копируем ключики в виртуальные машины из [hosts.yaml](hosts.yml):
 
  ```shell
-ssh-copy-id root@control1.kryukov.local
-ssh-copy-id root@control2.kryukov.local
-ssh-copy-id root@control3.kryukov.local
-ssh-copy-id root@worker1.kryukov.local
-ssh-copy-id root@worker2.kryukov.local
-ssh-copy-id root@worker3.kryukov.local
+ssh-copy-id root@ismail-ha101p.oblako.local
+ssh-copy-id root@ismail-ha102p.oblako.local
+ssh-copy-id root@ismail-ctr101p.oblako.local
+ssh-copy-id root@ismail-ctr102p.oblako.local
+ssh-copy-id root@ismail-ctr103p.oblako.local
+ssh-copy-id root@ismail-data101p.oblako.local
+ssh-copy-id root@ismail-data102p.oblako.local
+ssh-copy-id root@ismail-data103p.oblako.local
 ```
 
 ## Конфигурационные параметры
 
-* [Инвентори](hosts.yaml).
+* [Инвентори]().
 * [Общая конфигурация](group_vars/k8s_cluster).
 
 ## Установка
