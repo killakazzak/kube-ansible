@@ -26,7 +26,7 @@ yum install ansible -y
 ssh-keygen
 ```
 
-Копируем ключики в виртуальные машины из [hosts.yaml][hosts.yml](https://github.com/killakazzak/kube-ansible/blob/main/hosts.yaml):
+Копируем ключики в виртуальные машины из [hosts.yaml](https://github.com/killakazzak/kube-ansible/blob/main/hosts.yaml):
 
  ```shell
 ssh-copy-id root@ismail-ha101p.oblako.local
