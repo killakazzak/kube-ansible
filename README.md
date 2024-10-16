@@ -54,7 +54,9 @@ ansible-playbook install-cluster.yaml
 
 Используются haproxy и keepalived.
 
-https://github.com/BigKAA/00-kube-ansible/blob/main/images/ha_cluster.jpg?raw=true
+https://raw.githubusercontent.com/BigKAA/00-kube-ansible/refs/heads/main/images/ha_cluster.jpg
+
+
 
 В конфигурационном файле определите параметры доступа к API :
 
