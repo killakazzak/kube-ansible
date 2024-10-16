@@ -1,0 +1,32 @@
+## ansible-palybook install-cluster.yaml --become-user=root --become
+---
+- name: Checking for an odd number of nodes.
+  hosts: groups['k8s_masters'][0]
+    
+  tasks:
+    - name: Abort if an even number of nodes
+      ansible.builtin.debug:
+        msg: "Abort. Аn even number of nodes"
+      failed_when: groups['k8s_masters'] | length | int is divisibleby 2
+
+- name: Install packages
+  hosts: k8s_cluster
+
+  roles:
+    - prepare-hosts
+
+- name: Install Control nodes
+  hosts: k8s_masters
+
+  roles:
+    - role: ha
+      when: ha_cluster_virtual_ip is defined and ha_cluster_virtual_ip != ""
+    - role: master
+      when: inventory_hostname == groups['k8s_masters'][0]
+    - role: second_controls
+
+- name: Install worker nodes
+  hosts: groups['k8s_masters'][0],k8s_workers
+
+  roles:
+    - workers
