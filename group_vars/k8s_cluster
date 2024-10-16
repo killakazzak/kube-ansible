@@ -28,7 +28,7 @@ sandbox_image: registry.k8s.io/pause:3.10
 # Work only install without eBPF
 encapsulation: "IPIPCrossSubnet"
 # https://github.com/projectcalico/calico
-tigera_operator_version: v3.28.1
+tigera_operator_version: v3.28.2
 ### To install ePBF uncomment next line
 # enableBPF: yes
 
