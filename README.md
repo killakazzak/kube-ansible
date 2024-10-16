@@ -54,7 +54,7 @@ ansible-playbook install-cluster.yaml
 
 Используются haproxy и keepalived.
 
-[схема](https://raw.githubusercontent.com/BigKAA/00-kube-ansible/refs/heads/main/images/ha_cluster.jpg)
+![схема](https://raw.githubusercontent.com/BigKAA/00-kube-ansible/refs/heads/main/images/ha_cluster.jpg)
 
 
 
