@@ -46,19 +46,6 @@ ssh-copy-id root@ismail-data103p.oblako.local
 
 ## Установка
 
-### k8s с одной control node
-
-В [инвентори](hosts.yaml) в группе `k8s_masters` необходимо указать только один хост.
-
-```shell
-ansible-playbook install-cluster.yaml
-```
-
-### k8s с несколькими control nodes
-
-В [инвентори](hosts.yaml) в группе `k8s_masters` необходимо указать **нечётное количество
-control nodes**.
-
 ```shell
 ansible-playbook install-cluster.yaml
 ```
